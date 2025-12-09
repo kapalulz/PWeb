@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects - Oleksandr Kashuba</title>
+  <meta name="description" content="Project portfolio of Oleksandr Kashuba - DevOps and cloud engineering.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="projects-hero">
+        <h1>My Projects</h1>
+        <p class="muted">A collection of work across cloud, DevOps, and web.</p>
+        <div class="pills">
+          <button class="pill-btn active" data-filter="all">All</button>
+          <button class="pill-btn" data-filter="cloud">Cloud</button>
+          <button class="pill-btn" data-filter="devops">DevOps</button>
+          <button class="pill-btn" data-filter="games">Games</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="projects-grid" id="projects-grid">
+          <div class="project-card" data-category="cloud">
+            <img class="project-thumb" src="images/adds/AWS.svg" alt="AWS">
+            <h3 class="project-title">AWS Serverless</h3>
+            <p class="project-desc">Serverless website on AWS Lambda that scales with traffic.</p>
+            <a href="https://github.com/kapalulz/AWS_serverless_website/tree/main" target="_blank" rel="noopener">Repo</a>
+          </div>
+          <div class="project-card" data-category="cloud">
+            <img class="project-thumb" src="images/adds/HashiCorp Terraform.svg" alt="Terraform">
+            <h3 class="project-title">AWS Bastion Host</h3>
+            <p class="project-desc">Highly available bastion host deployed with Terraform.</p>
+            <a href="https://github.com/kapalulz/aws_bastion_host_terraform" target="_blank" rel="noopener">Repo</a>
+          </div>
+          <div class="project-card" data-category="devops">
+            <img class="project-thumb" src="images/adds/Bash.svg" alt="Bash">
+            <h3 class="project-title">AWS EC2 Scheduler</h3>
+            <p class="project-desc">Cron-driven start/stop scheduling for EC2 instances.</p>
+            <a href="https://github.com/kapalulz/aws_EC2_scheduler_terraform" target="_blank" rel="noopener">Repo</a>
+          </div>
+          <div class="project-card" data-category="devops">
+            <img class="project-thumb" src="images/adds/Kubernetes.svg" alt="Kubernetes">
+            <h3 class="project-title">Kubernetes & Docker</h3>
+            <p class="project-desc">PHP web app in a container, deployed on Amazon EKS.</p>
+            <a href="https://github.com/kapalulz/kubernetes" target="_blank" rel="noopener">Repo</a>
+          </div>
+          <div class="project-card" data-category="devops">
+            <img class="project-thumb" src="images/adds/Azure Devops.svg" alt="Azure DevOps">
+            <h3 class="project-title">Azure Pipeline</h3>
+            <p class="project-desc">From commit to build and upload to App Center.</p>
+            <a href="https://github.com/kapalulz?tab=repositories" target="_blank" rel="noopener">Details</a>
+          </div>
+          <div class="project-card" data-category="cloud">
+            <img class="project-thumb" src="images/adds/AWS-Cloud_32.svg" alt="AWS Cloud">
+            <h3 class="project-title">Serverless CSV</h3>
+            <p class="project-desc">Transaction counting from CSV on AWS Lambda.</p>
+            <a href="https://github.com/kapalulz/AWS_serverless_Lambda_transaction_counter" target="_blank" rel="noopener">Repo</a>
+          </div>
+          <div class="project-card" data-category="cloud">
+            <img class="project-thumb" src="images/adds/Ansible.svg" alt="Ansible">
+            <h3 class="project-title">Web App + MySQL</h3>
+            <p class="project-desc">ASP.NET MVC app for a WoW guild: applications and profiles.</p>
+            <a href="https://github.com/kapalulz?tab=repositories" target="_blank" rel="noopener">Details</a>
+          </div>
+          <div class="project-card" data-category="games">
+            <div class="project-icon">🎮</div>
+            <h3 class="project-title">Unity Tetris</h3>
+            <p class="project-desc">Classic Tetris in Unity3D with hotkeys and speed-up.</p>
+            <a href="https://github.com/kapalulz/game_simpleTetris_unity3D" target="_blank" rel="noopener">Repo</a>
+          </div>
+          <div class="project-card" data-category="games">
+            <div class="project-icon">🧊</div>
+            <h3 class="project-title">Game Cube</h3>
+            <p class="project-desc">Unity3D mini-game: split ball on collisions, ad for extra life.</p>
+            <a href="https://github.com/kapalulz/game_simpleTetris_unity3D" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span></span>
+      <div class="spaced">
+        <a href="https://github.com/kapalulz" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/kapalulz/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://t.me/kapalulz" target="_blank" rel="noopener">Telegram</a>
+        <a href="mailto:kashuba.kap@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    const buttons = Array.from(document.querySelectorAll(".pill-btn"));
+    const cards = Array.from(document.querySelectorAll(".project-card"));
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.dataset.filter || "all";
+        cards.forEach((card) => {
+          const category = card.dataset.category || "all";
+          const show = filter === "all" || category === filter;
+          card.style.display = show ? "grid" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

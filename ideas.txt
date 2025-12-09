@@ -1,0 +1,42 @@
+Wheel idea (outer + inner circles) for tool icons
+
+Structure:
+<div class="wheel" aria-hidden="true">
+  <div class="wheel__ring"></div>
+  <div class="wheel__items">
+    <div class="wheel__item" style="top: 10%; left: 50%; transform: translate(-50%, -50%);">
+      <img src="images/adds/AWS.svg" alt="">
+    </div>
+    <div class="wheel__item" style="top: 28%; left: 85%; transform: translate(-50%, -50%);">
+      <img src="images/adds/HashiCorp Terraform.svg" alt="">
+    </div>
+    <div class="wheel__item" style="top: 72%; left: 85%; transform: translate(-50%, -50%);">
+      <img src="images/adds/Docker.svg" alt="">
+    </div>
+    <div class="wheel__item" style="top: 90%; left: 50%; transform: translate(-50%, -50%);">
+      <img src="images/adds/Jenkins.svg" alt="">
+    </div>
+    <div class="wheel__item" style="top: 72%; left: 15%; transform: translate(-50%, -50%);">
+      <img src="images/adds/Git.svg" alt="">
+    </div>
+    <div class="wheel__item" style="top: 28%; left: 15%; transform: translate(-50%, -50%);">
+      <img src="images/adds/Azure Devops.svg" alt="">
+    </div>
+  </div>
+  <div class="wheel__items wheel__items--inner">
+    <div class="wheel__item wheel__item--small" style="top: 12%; left: 50%; transform: translate(-50%, -50%);">
+      <img src="images/adds/Linux.svg" alt="">
+    </div>
+    <div class="wheel__item wheel__item--small" style="top: 50%; left: 88%; transform: translate(-50%, -50%);">
+      <img src="images/adds/Windows 11.svg" alt="">
+    </div>
+    <div class="wheel__item wheel__item--small" style="top: 88%; left: 50%; transform: translate(-50%, -50%);">
+      <img src="images/adds/React.svg" alt="">
+    </div>
+    <div class="wheel__item wheel__item--small" style="top: 50%; left: 12%; transform: translate(-50%, -50%);">
+      <img src="images/adds/Python.svg" alt="">
+    </div>
+  </div>
+</div>
+
+Styles: see .wheel, .wheel__ring, .wheel__items, .wheel__items--inner, .wheel__item, .wheel__item--small in Main.css
